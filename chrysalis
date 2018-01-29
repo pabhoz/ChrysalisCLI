@@ -22,11 +22,16 @@ abstract()
             read pass
             echo "Host: $host , DBName: $dbname , User: $user , Password: $password"
             php-cgi -f "$BASEDIR/index.php" host=$host dbname=$dbname user=$user pass=$pass output=$PWD at=1 | cat
-            echo "\nDo you want to open the output folder? [y/n]:"
+            echo "\nDo you want to open the output folder? [y/n] or [c] if you want to open the project with vscode (you need to install vscode CLI):"
             read response
             if [ $response = "y" ]
             then
                 open $PWD
+            else
+                if [ $response = "c" ]
+                then
+                    code -g $PWD
+                fi
             fi
             ;;
             db) 
