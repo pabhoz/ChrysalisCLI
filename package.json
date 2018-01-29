@@ -1,0 +1,26 @@
+{
+  "name": "@redfoxme/chrysalis",
+  "version": "1.0.0",
+  "description": "A PHP Database model abstracter to work with fox framework",
+  "main": "chrysalis",
+  "scripts": {
+    "test": "chrysalis abstract tables"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabhoz/ChrysalisCLI.git"
+  },
+  "keywords": [
+    "php",
+    "orm",
+    "redfoxme",
+    "foxframework",
+    "chrysalis"
+  ],
+  "author": "Pablo Bejarano <pabhoz@gmail.com> (http://redfoxme.com/pabhoz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pabhoz/ChrysalisCLI/issues"
+  },
+  "homepage": "https://github.com/pabhoz/ChrysalisCLI#readme"
+}

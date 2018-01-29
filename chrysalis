@@ -1,0 +1,41 @@
+#!/bin/bash
+
+chistatus=0
+BASEDIR=$(dirname "$0")
+#echo "$BASEDIR"
+
+abstract()
+{
+    if [ -z $1 ]
+    then
+        echo "Avialable abstractions: db, tables";
+    else
+        case $1 in
+            tables) 
+            echo "Host: "
+            read host
+            echo "dbname: "
+            read dbname
+            echo "username: "
+            read user
+            echo "password: "
+            read pass
+            echo "Output location (fullpath without / at the end, make sure you have permissions to write): "
+            read output
+            #echo "Host: $host , DBName: $dbname , User: $user , Password: $password"
+            php-cgi -f ./index.php host=$host dbname=$dbname user=$user pass=$pass output=$output | echo
+            open $output
+            #read name
+            #$BASEDIR/commands/new html $basedir $name
+            ;;
+        esac
+    fi
+}
+
+command=$1
+case $command in
+    abstract) abstract $2;;
+    -help) echo "comming soon";;
+    -v) echo "v 1.0.0";;
+    *) echo "Invalid option";;
+esac
