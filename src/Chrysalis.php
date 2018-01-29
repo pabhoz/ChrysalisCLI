@@ -53,14 +53,13 @@ class Chrysalis{
     
     public function generateAllClasses(string $output, $additionalParams = []){
         $n = 0;
-        $names = "(";
+        $names = "";
         foreach ($this->tables as $table) {
             $this->generateClass($table, $output, $additionalParams);
-            $names.=$table->getTableName().",";
+            $names.="\n\t".$table->getTableName();
             $n++;
         }
-        $names .=") ";
-        return "$n classes generated $names @ $output";
+        return "\n$n classes generated @ $output $names";
     }
     
     private function setTables(array $tables, bool $debugMode){
@@ -68,12 +67,10 @@ class Chrysalis{
         $this->tables = self::processTables($tables);
         if($debugMode){
             print "Table Count: ".count($this->tables);
-            print "</br>Tables found:";
-            print "<ul>";
+            print "\nTables found:";
             array_map(function($table){
-                print "<li>".$table->getTableName()."</li>";
+                print "\n\t".$table->getTableName();
             },$this->tables);
-            print "</ul>";
         }
     }
     
