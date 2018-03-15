@@ -1,4 +1,4 @@
-# Chrysalis
+# Chrysalis CLI
 [![Version](https://img.shields.io/badge/version-1.0.3-red.svg)]()
 [![PHP Version](https://img.shields.io/badge/PHP-7.1-red.svg)]()
 [![License](https://img.shields.io/badge/Licence-Apache--2.0-green.svg)]()
