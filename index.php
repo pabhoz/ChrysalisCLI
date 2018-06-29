@@ -15,6 +15,6 @@ $chrysalis->abstractDb(true);
 if($abstractTables){
     $additionalMethod = "    public function getMyVars(){\n return get_object_vars(".'$this'.");\n    }\n";
 
-    $o = $chrysalis->generateAllClasses("$output/",["extends"=>"BModel", "parent_construct" => true, "additionalMethods"=>[$additionalMethod]]);
+    $o = $chrysalis->generateAllClasses("$output/",["extends"=>"\Fox\FoxModel", "parent_construct" => true, "additionalMethods"=>[$additionalMethod]]);
     echo $o;
 }
