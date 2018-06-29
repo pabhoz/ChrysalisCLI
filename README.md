@@ -1,4 +1,8 @@
-# Chrysalis
+# Chrysalis CLI
+[![Version](https://img.shields.io/badge/version-1.0.3-red.svg)]()
+[![PHP Version](https://img.shields.io/badge/PHP-7.1-red.svg)]()
+[![License](https://img.shields.io/badge/Licence-Apache--2.0-green.svg)]()
+
 Chrysalis is the CLI for [Chrysalis](https://github.com/pabhoz/Chrysalis) a PHP Library created by [@Pabhoz](https://github.com/pabhoz) to generate classes from your project Data Model using PDO.
 
 ### Getting Started
